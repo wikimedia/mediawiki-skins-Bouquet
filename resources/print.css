@@ -1,0 +1,4 @@
+/* Don't display the logo in print mode */
+header#branding {
+	background-image: none !important;
+}

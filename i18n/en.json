@@ -1,0 +1,6 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"bouquet-navigation": "* mainpage|mainpage-description\r\n** recentchanges-url|recentchanges\r\n** randompage-url|randompage\r\n* faqpage|FAQ\r\n* helppage|help\r\n* portal-url|portal\r\n* currentevents-url|currentevents"
+}
