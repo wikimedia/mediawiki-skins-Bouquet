@@ -9,7 +9,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * @ingroup Skins
  */
 class SkinBouquet extends SkinTemplate {
-	var $skinname = 'bouquet', $stylename = 'bouquet',
+	public $skinname = 'bouquet', $stylename = 'bouquet',
 		$template = 'BouquetTemplate', $useHeadElement = true;
 
 	/**
@@ -125,7 +125,7 @@ class BouquetTemplate extends BaseTemplate {
 
 	<div id="main">
 		<div id="primary">
-			<nav id="access" class="noprint" role="navigation" class="clearfix">
+			<nav id="access" class="clearfix noprint" role="navigation">
 				<h1 class="assistive-text section-heading">Main menu</h1>
 				<div id="jump-to-nav" class="mw-jump skip-link screen-reader-text"><?php $this->msg( 'jumpto' ) ?> <a href="#content"><?php $this->msg( 'jumptonavigation' ) ?></a><?php $this->msg( 'comma-separator' ) ?><a href="#searchInput"><?php $this->msg( 'jumptosearch' ) ?></a></div>
 				<div class="menu">

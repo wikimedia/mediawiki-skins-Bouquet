@@ -11,7 +11,7 @@
  * @ingroup Skins
  * @author Automattic
  * @author Jack Phoenix <jack@countervandalism.net> -- MediaWiki port
- * @date 16 February 2014
+ * @date 12 October 2014
  *
  * To install, place the Bouquet folder (the folder containing this file!) into
  * skins/ and add this line to your wiki's LocalSettings.php:
