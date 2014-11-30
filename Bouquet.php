@@ -11,7 +11,7 @@
  * @ingroup Skins
  * @author Automattic
  * @author Jack Phoenix <jack@countervandalism.net> -- MediaWiki port
- * @date 12 October 2014
+ * @date 30 November 2014
  *
  * To install, place the Bouquet folder (the folder containing this file!) into
  * skins/ and add this line to your wiki's LocalSettings.php:
@@ -26,7 +26,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['skin'][] = array(
 	'path' => __FILE__,
 	'name' => 'Bouquet',
-	'version' => '1.2.1',
+	'version' => '1.2.2',
 	'author' => array( '[http://automattic.com Automattic]', 'Jack Phoenix' ),
 	'description' => 'Elegant, simple theme inspired by the beauty found in flowers',
 	'url' => 'https://www.mediawiki.org/wiki/Skin:Bouquet',
@@ -38,16 +38,12 @@ $wgExtensionCredits['skin'][] = array(
 // *this* file.
 $wgValidSkinNames['bouquet'] = 'Bouquet';
 
-// Autoload the skin class, make it a valid skin, set up i18n, set up CSS & JS
-// (via ResourceLoader)
+// Autoload the skin class, set up i18n, set up CSS & JS (via ResourceLoader)
 $wgAutoloadClasses['SkinBouquet'] = __DIR__ . '/Bouquet.skin.php';
 $wgMessagesDirs['SkinBouquet'] = __DIR__ . '/i18n';
+
 $wgResourceModules['skins.bouquet'] = array(
 	'styles' => array(
-		// MonoBook also loads these
-		'skins/common/commonElements.css' => array( 'media' => 'screen' ),
-		'skins/common/commonContent.css' => array( 'media' => 'screen' ),
-		'skins/common/commonInterface.css' => array( 'media' => 'screen' ),
 		// Styles custom to the Bouquet skin
 		'skins/Bouquet/resources/print.css' => array( 'media' => 'print' ),
 		'skins/Bouquet/resources/style.css' => array( 'media' => 'screen' )

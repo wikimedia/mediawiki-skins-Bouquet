@@ -1737,74 +1737,6 @@ div.noarticletext p {
 	margin: 5px;
 }
 
-/*
-** keep the whitespace in front of the ^=, hides rule from Konqueror
-** this is CSS 3, the validator doesn't like it when validating as CSS 2
-*/
-div#content article a.external,
-div#content article a.external[href ^="gopher://"] {
-	/* @embed */
-	background: url(../../monobook/external-ltr.png) center right no-repeat;
-	padding-right: 13px;
-}
-div#content article a.external[href ^="https://"],
-.link-https {
-	/* @embed */
-	background: url(../../monobook/lock_icon.gif) center right no-repeat;
-	padding-right: 16px;
-}
-div#content article a.external[href ^="mailto:"],
-.link-mailto {
-	/* @embed */
-	background: url(../../monobook/mail_icon.gif) center right no-repeat;
-	padding-right: 18px;
-}
-div#content article a.external[href ^="news://"] {
-	/* @embed */
-	background: url(../../monobook/news_icon.png) center right no-repeat;
-	padding-right: 18px;
-}
-div#content article a.external[href ^="ftp://"],
-.link-ftp {
-	/* @embed */
-	background: url(../../monobook/file_icon.gif) center right no-repeat;
-	padding-right: 18px;
-}
-div#content article a.external[href ^="irc://"],
-.link-irc {
-	/* @embed */
-	background: url(../../monobook/discussionitem_icon.gif) center right no-repeat;
-	padding-right: 18px;
-}
-div#content article a.external[href $=".ogg"], div#content article a.external[href $=".OGG"],
-div#content article a.external[href $=".mid"], div#content article a.external[href $=".MID"],
-div#content article a.external[href $=".midi"], div#content article a.external[href $=".MIDI"],
-div#content article a.external[href $=".mp3"], div#content article a.external[href $=".MP3"],
-div#content article a.external[href $=".wav"], div#content article a.external[href $=".WAV"],
-div#content article a.external[href $=".wma"], div#content article a.external[href $=".WMA"],
-.link-audio {
-	/* @embed */
-	background: url("../../monobook/audio.png") center right no-repeat;
-	padding-right: 13px;
-}
-div#content article a.external[href $=".ogm"], div#content article a.external[href $=".OGM"],
-div#content article a.external[href $=".avi"], div#content article a.external[href $=".AVI"],
-div#content article a.external[href $=".mpeg"], div#content article a.external[href $=".MPEG"],
-div#content article a.external[href $=".mpg"], div#content article a.external[href $=".MPG"],
-.link-video {
-	/* @embed */
-	background: url("../../monobook/video.png") center right no-repeat;
-	padding-right: 13px;
-}
-div#content article a.external[href $=".pdf"], div#content article a.external[href $=".PDF"],
-div#content article a.external[href *=".pdf#"], div#content article a.external[href *=".PDF#"],
-div#content article a.external[href *=".pdf?"], div#content article a.external[href *=".PDF?"],
-.link-document {
-	/* @embed */
-	background: url("../../monobook/document.png") center right no-repeat;
-	padding-right: 12px;
-}
-
 /* Diffs */
 table.diff {
 	background-color: transparent;
@@ -1843,10 +1775,6 @@ div#content .clearfix:after {
 div#content .clearfix {
 	display: inline-block;
 }
-
-/* Hides from IE-mac \*/
-* html .clearfix { height: 1%; }
-/* End hide from IE-mac */
 
 /** Comments */
 div#allcomments .full,

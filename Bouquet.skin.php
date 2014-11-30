@@ -42,7 +42,11 @@ class SkinBouquet extends SkinTemplate {
 		parent::setupSkinUserCss( $out );
 
 		// Load CSS via ResourceLoader
-		$out->addModuleStyles( 'skins.bouquet' );
+		$out->addModuleStyles( array(
+			'mediawiki.skinning.interface',
+			'mediawiki.skinning.content.externallinks',
+			'skins.bouquet'
+		) );
 	}
 }
 
@@ -361,7 +365,7 @@ class BouquetTemplate extends BaseTemplate {
 		foreach ( $this->getToolbox() as $key => $tbItem ) {
 			echo $this->makeListItem( $key, $tbItem );
 		}
-		wfRunHooks( 'MonoBookTemplateToolboxEnd', array( &$this ) );
+
 		wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this, true ) );
 ?>
 		</ul>
