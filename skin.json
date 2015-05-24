@@ -1,0 +1,59 @@
+{
+	"name": "Bouquet",
+	"version": "1.2.3",
+	"author": [
+		"[http://automattic.com Automattic]",
+		"Jack Phoenix"
+	],
+	"url": "https://www.mediawiki.org/wiki/Skin:Bouquet",
+	"description": "Elegant, simple theme inspired by the beauty found in flowers",
+	"type": "skin",
+	"ValidSkinNames": {
+		"bouquet": "Bouquet"
+	},
+	"MessagesDirs": {
+		"SkinBouquet": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"SkinBouquet": "Bouquet.skin.php"
+	},
+	"ResourceModules": {
+		"skins.bouquet": {
+			"styles": {
+				"skins/Bouquet/resources/print.css": {
+					"media": "print"
+				},
+				"skins/Bouquet/resources/style.css": {
+					"media": "screen"
+				}
+			},
+			"position": "top"
+		},
+		"skins.bouquet.js": {
+			"scripts": "/skins/Bouquet/resources/js/navigation.js"
+		},
+		"themeloader.skins.bouquet.forgetmenot": {
+			"styles": {
+				"skins/Bouquet/resources/colors/forget-me-not/forget-me-not.css": {
+					"media": "screen"
+				}
+			}
+		},
+		"themeloader.skins.bouquet.pinkdogwood": {
+			"styles": {
+				"skins/Bouquet/resources/colors/pink-dogwood/pink-dogwood.css": {
+					"media": "screen"
+				}
+			}
+		},
+		"themeloader.skins.bouquet.tigerlily": {
+			"styles": {
+				"skins/Bouquet/resources/colors/tiger-lily/tiger-lily.css": {
+					"media": "screen"
+				}
+			}
+		}
+	}
+}

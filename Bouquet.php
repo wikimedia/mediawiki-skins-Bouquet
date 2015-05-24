@@ -15,62 +15,18 @@
  *
  * To install, place the Bouquet folder (the folder containing this file!) into
  * skins/ and add this line to your wiki's LocalSettings.php:
- * require_once("$IP/skins/Bouquet/Bouquet.php");
+ * wfLoadSkin( 'Bouquet' );
  */
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die( 'Not a valid entry point.' );
+ if ( function_exists( 'wfLoadSkin' ) ) {
+	wfLoadSkin( 'Bouquet' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$wgMessagesDirs['Bouquet'] = __DIR__ . '/i18n';
+	wfWarn(
+		'Deprecated PHP entry point used for Bouquet skin. Please use wfLoadSkin instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	);
+	return;
+} else {
+	die( 'This version of the Bouquet skin requires MediaWiki 1.25+' );
 }
-
-// Skin credits that will show up on Special:Version
-$wgExtensionCredits['skin'][] = array(
-	'path' => __FILE__,
-	'name' => 'Bouquet',
-	'version' => '1.2.2',
-	'author' => array( '[http://automattic.com Automattic]', 'Jack Phoenix' ),
-	'description' => 'Elegant, simple theme inspired by the beauty found in flowers',
-	'url' => 'https://www.mediawiki.org/wiki/Skin:Bouquet',
-);
-
-// The first instance must be strtolower()ed so that useskin=bouquet works and
-// so that it does *not* force an initial capital (i.e. we do NOT want
-// useskin=Bouquet) and the second instance is used to determine the name of
-// *this* file.
-$wgValidSkinNames['bouquet'] = 'Bouquet';
-
-// Autoload the skin class, set up i18n, set up CSS & JS (via ResourceLoader)
-$wgAutoloadClasses['SkinBouquet'] = __DIR__ . '/Bouquet.skin.php';
-$wgMessagesDirs['SkinBouquet'] = __DIR__ . '/i18n';
-
-$wgResourceModules['skins.bouquet'] = array(
-	'styles' => array(
-		// Styles custom to the Bouquet skin
-		'skins/Bouquet/resources/print.css' => array( 'media' => 'print' ),
-		'skins/Bouquet/resources/style.css' => array( 'media' => 'screen' )
-	),
-	'position' => 'top'
-);
-
-// JS module
-$wgResourceModules['skins.bouquet.js'] = array(
-	'scripts' => '/skins/Bouquet/resources/js/navigation.js'
-);
-
-// Themes
-$wgResourceModules['themeloader.skins.bouquet.forgetmenot'] = array(
-	'styles' => array(
-		'skins/Bouquet/resources/colors/forget-me-not/forget-me-not.css' => array( 'media' => 'screen' )
-	)
-);
-
-$wgResourceModules['themeloader.skins.bouquet.pinkdogwood'] = array(
-	'styles' => array(
-		'skins/Bouquet/resources/colors/pink-dogwood/pink-dogwood.css' => array( 'media' => 'screen' )
-	)
-);
-
-$wgResourceModules['themeloader.skins.bouquet.tigerlily'] = array(
-	'styles' => array(
-		'skins/Bouquet/resources/colors/tiger-lily/tiger-lily.css' => array( 'media' => 'screen' )
-	)
-);
