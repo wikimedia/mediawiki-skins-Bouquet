@@ -7,6 +7,7 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Skin:Bouquet",
 	"description": "Elegant, simple theme inspired by the beauty found in flowers",
+	"license-name": "GPL-2.0+",
 	"type": "skin",
 	"ValidSkinNames": {
 		"bouquet": "Bouquet"
@@ -17,7 +18,9 @@
 		]
 	},
 	"AutoloadClasses": {
-		"SkinBouquet": "Bouquet.skin.php"
+		"SkinBouquet": "Bouquet.skin.php",
+		"BouquetTemplate": "Bouquet.skin.php",
+		"BouquetSkinNavigationService": "Bouquet.skin.php"
 	},
 	"ResourceModules": {
 		"skins.bouquet": {
