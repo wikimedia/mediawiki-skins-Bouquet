@@ -366,7 +366,7 @@ class BouquetTemplate extends BaseTemplate {
 			echo $this->makeListItem( $key, $tbItem );
 		}
 
-		wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this, true ) );
+		Hooks::run( 'SkinTemplateToolboxEnd', array( &$this, true ) );
 ?>
 		</ul>
 	</aside>
