@@ -2,3 +2,9 @@
 header#branding {
 	background-image: none !important;
 }
+/* nor the footer
+ * @see https://phabricator.wikimedia.org/T111435
+ */
+#colophon {
+	display: none;
+}
