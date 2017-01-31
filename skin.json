@@ -6,7 +6,7 @@
 		"Jack Phoenix"
 	],
 	"url": "https://www.mediawiki.org/wiki/Skin:Bouquet",
-	"description": "Elegant, simple theme inspired by the beauty found in flowers",
+	"descriptionmsg": "bouquet-desc",
 	"license-name": "GPL-2.0+",
 	"type": "skin",
 	"ValidSkinNames": {
