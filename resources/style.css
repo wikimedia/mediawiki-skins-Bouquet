@@ -1753,12 +1753,6 @@ div.g-give-container {
 	width: auto;
 }
 
-/* Social tools' clearfix thingy, required for the proper display of most
-social tools' special pages, such as Special:UserActivity, Special:TopUserboxes, etc. */
-.cleared {
-	clear: both;
-}
-
 /* Don't let SocialProfile's CSS files mess up the skin's logo image */
 header.clearfix {
 	display: block !important;
