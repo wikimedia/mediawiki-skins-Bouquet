@@ -1,0 +1,25 @@
+.entry-date {
+	border-radius: 0 10px 10px 0;
+	border-right-width: 5px;
+	border-left-width: 0;
+	height: 45px;
+	left: -1.3em;
+	z-index: 9999;
+}
+.entry-date a {
+	margin-top: -9.5px;
+}
+.entry-header {
+  	padding: 0 0 0.6em;
+}
+.entry-title {
+	margin-left: 1.4em;
+}
+.entry-content {
+	margin-top: 1.1em;
+}
+embed,
+iframe,
+object {
+	max-width: 100%;
+}

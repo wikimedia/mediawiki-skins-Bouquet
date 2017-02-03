@@ -1,0 +1,28 @@
+.menu-toggle,
+.main-small-navigation .nav-menu.toggled-on {
+	display: block;
+	overflow: hidden;
+}
+
+.navigation-main ul {
+	display: none;
+}
+
+#access .toggled-on li {
+	float: none;
+}
+
+#access ul.toggled-on ul,
+#access ul.toggled-on ul ul {
+	box-shadow: none;
+	display: block;
+	float: none;
+	position: relative;
+	top: auto;
+	left: 1em;
+}
+
+#access ul.toggled-on ul a {
+	background: none;
+	width: 100%;
+}

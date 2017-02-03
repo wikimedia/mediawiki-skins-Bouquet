@@ -1,0 +1,17 @@
+#content .gallery-columns-3 .gallery-item {
+	width: 31%;
+	padding-right: 2%;
+}
+#content .gallery-columns-3 .gallery-item img {
+	width: 100%;
+	height: auto;
+}
+#content .gallery-columns-3 .gallery-item img {
+	padding: 1px;
+}
+#comments {
+	padding: 3em 1em;
+}
+.wp-caption {
+	max-width: 100%;
+}

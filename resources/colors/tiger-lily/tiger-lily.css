@@ -16,7 +16,7 @@ input#searchInput, input#searchInputTop {
 }
 #primary input#searchInput, #primary input#searchInputTop {
 	/* @embed */
-	background: #e9b69e url("../images/search-bg.png") no-repeat 10px 8px;
+	background: #e9b69e url(search-bg.png) no-repeat 10px 8px;
 	border-color: #be6d47;
 }
 a {

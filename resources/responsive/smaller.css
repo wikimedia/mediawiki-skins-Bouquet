@@ -1,0 +1,35 @@
+#primary {
+	float: none;
+}
+#secondary-wrapper {
+	clear: both;
+	float: none;
+	margin-top: 0.9em;
+	width: 100%;
+}
+#content-wrapper,
+#access {
+	width: 100%;
+}
+#content,
+#main .widget-area {
+	border-width: 2px;
+	padding: 0.5em;
+}
+.entry-date {
+	border-width: 2px;
+	left: -0.6em;
+}
+.entry-title {
+	margin-left: 1.6em;
+}
+#nav-below {
+	padding: 2em;
+	top: 0.5em;
+}
+#comments {
+	padding: 3em 0;
+}
+#colophon {
+	padding-top: 0;
+}

@@ -16,7 +16,7 @@ input#searchInput, input#searchInputTop {
 }
 #primary input#searchInput, #primary input#searchInputTop {
 	/* @embed */
-	background: #fafafa url("../images/search-bg.png") no-repeat 10px 8px;
+	background: #fafafa url(search-bg.png) no-repeat 10px 8px;
 	border-color: #e7d9b9;
 }
 a {
