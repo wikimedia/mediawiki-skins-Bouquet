@@ -98,41 +98,6 @@ a {
 .page-link a:hover {
 	background-color: #ac3200;
 }
-#primary .post .notice,
-#primary .error404 .searchform {
-	background: #f9cdb5;
-}
-#comments article {
-	border-color: #eec5ad;
-}
-#comments-title {
-	color: #1c481d;
-}
-.nopassword,
-.nocomments {
-	color: #d6ac8c;
-}
-#comments li {
-	background: #f9d9c6;
-}
-#comments .comment-meta,
-#comments .comment-meta a,
-.nopassword,
-.subscribe-label {
-	color: #2f331c;
-}
-.bypostauthor .avatar {
-	background: #f9c5a6;
-}
-#respond h3 {
-	color: #3b4a26;
-}
-.comment-reply-link {
-	background-color: #f9c5a6;
-}
-.comment-reply-link:hover {
-	background: #e8b699;
-}
 .widget-title,
 .widget-title a {
 	color: #1c481d;
@@ -140,34 +105,9 @@ a {
 .widget ul li {
 	border-color: #e9b598;
 }
-#wp-calendar caption {
-	color: #dd5d1f;
-}
-#wp-calendar th {
-	background: #e8ac7c;
-	border-color: #fdc8aa;
-	color: #925e33;
-}
-#wp-calendar tbody td {
-	background: #fcbe8d;
-	border-color: #fdc8aa;
-	color: #925e33;
-}
-#wp-calendar #today {
-	background: #ffdabc;
-}
-#flickr_badge_uber_wrapper a:hover,
-#flickr_badge_uber_wrapper a:link,
-#flickr_badge_uber_wrapper a:active,
-#flickr_badge_uber_wrapper a:visited {
-	color: #ca4d11 !important;
-}
 #site-generator {
 	color: #fdc8aa;
 }
 #site-generator a {
 	color: #fd9d66;
-}
-#ie8 .entry-date {
-	background: #f9d1ba;
 }

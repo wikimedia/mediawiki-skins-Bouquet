@@ -88,50 +88,6 @@ a {
 .entry-content hr {
 	background-color: #f0d4db;
 }
-.entry-meta {
-	color: #63724b;
-}
-.page-link a {
-	background-color: #a23855;
-}
-.page-link a:hover {
-	background-color: #b14562;
-}
-#primary .post .notice,
-#primary .error404 .searchform {
-	background: #ffe2ea;
-}
-#comments article {
-	border-color: #fde0e7;
-}
-#comments-title {
-	color: #3b4a26;
-}
-.nopassword,
-.nocomments {
-	color: #dcc8cf;
-}
-#comments li {
-	background: #fff5fc;
-}
-#comments .comment-meta,
-#comments .comment-meta a,
-.nopassword,
-.subscribe-label {
-	color: #63724b;
-}
-.bypostauthor .avatar {
-	background: #ffebf2;
-}
-#respond h3 {
-	color: #3b4a26;
-}
-.comment-reply-link {
-	background-color: #f4ebf0;
-}
-.comment-reply-link:hover {
-	background: #e3dbdf;
-}
 .widget-title,
 .widget-title a {
 	color: #3b4a26;
@@ -139,34 +95,9 @@ a {
 .widget ul li {
 	border-color: #e9c2d2;
 }
-#wp-calendar caption {
-	color: #934f6d;
-}
-#wp-calendar th {
-	background: #f8bdd5;
-	border-color: #ffd8e8;
-	color: #934f6d;
-}
-#wp-calendar tbody td {
-	background: #f8c7db;
-	border-color: #ffd8e8;
-	color: #934f6d;
-}
-#wp-calendar #today {
-	background: #ffebf2;
-}
-#flickr_badge_uber_wrapper a:hover,
-#flickr_badge_uber_wrapper a:link,
-#flickr_badge_uber_wrapper a:active,
-#flickr_badge_uber_wrapper a:visited {
-	color: #bb5974 !important;
-}
 #site-generator {
 	color: #ffd8e8;
 }
 #site-generator a {
 	color: #fa87a1;
-}
-#ie8 .entry-date {
-	background: #ffebf2;
 }
