@@ -1,4 +1,9 @@
 {
-	"@metadata": {},
-	"bouquet-desc": "{{desc|name=Bouquet|url=https://www.mediawiki.org/wiki/Skin:Bouquet}}"
+	"@metadata": {
+		"authors": [
+			"Umherirrender"
+		]
+	},
+	"bouquet-desc": "{{desc|what=skin|name=Bouquet|url=https://www.mediawiki.org/wiki/Skin:Bouquet}}",
+	"bouquet-navigation": "{{ignore}}"
 }
