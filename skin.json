@@ -1,9 +1,10 @@
 {
 	"name": "Bouquet",
-	"version": "1.2.4",
+	"version": "1.2.5",
 	"author": [
 		"[http://automattic.com Automattic]",
-		"Jack Phoenix"
+		"Jack Phoenix",
+		"Samantha Nguyen"
 	],
 	"url": "https://www.mediawiki.org/wiki/Skin:Bouquet",
 	"descriptionmsg": "bouquet-desc",
@@ -73,6 +74,11 @@
 					"media": "screen"
 				}
 			}
+		}
+	},
+	"ResourceModuleSkinStyles": {
+		"bouquet": {
+			"+mediawiki.special.preferences": "resources/special.preferences.css"
 		}
 	},
 	"manifest_version": 1
