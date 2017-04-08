@@ -1,6 +1,6 @@
 {
 	"name": "Bouquet",
-	"version": "1.2.5",
+	"version": "1.2.6",
 	"author": [
 		"[http://automattic.com Automattic]",
 		"Jack Phoenix",
@@ -78,7 +78,7 @@
 	},
 	"ResourceModuleSkinStyles": {
 		"bouquet": {
-			"+mediawiki.special.preferences": "resources/special.preferences.css"
+			"+mediawiki.special.preferences.styles": "resources/special.preferences.styles.css"
 		}
 	},
 	"manifest_version": 1
