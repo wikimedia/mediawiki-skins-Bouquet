@@ -14,18 +14,7 @@ class SkinBouquet extends SkinTemplate {
 	 * @param $out OutputPage
 	 */
 	public function initPage( OutputPage $out ) {
-		global $wgStylePath;
-
 		parent::initPage( $out );
-
-		// HTML5 shim has to be loaded this way for older IEs...
-		$out->addHeadItem( 'html5shim',
-			'<!--[if lt IE 9]>' .
-			Html::element( 'script', array(
-				'src' => $wgStylePath . '/Bouquet/resources/js/html5.js',
-				'type' => 'text/javascript'
-			) ) . '<![endif]-->'
-		);
 
 		// Add JS
 		$out->addModules( 'skins.bouquet.js' );
