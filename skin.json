@@ -1,6 +1,6 @@
 {
 	"name": "Bouquet",
-	"version": "1.2.7",
+	"version": "1.2.8",
 	"author": [
 		"[http://automattic.com Automattic]",
 		"Jack Phoenix",
@@ -17,6 +17,9 @@
 		"SkinBouquet": [
 			"i18n"
 		]
+	},
+	"ThemeModules": {
+		"bouquet": [ "forgetmenot", "pinkdogwood", "tigerlily" ]
 	},
 	"AutoloadClasses": {
 		"SkinBouquet": "Bouquet.skin.php",
