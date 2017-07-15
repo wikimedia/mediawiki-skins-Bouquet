@@ -165,7 +165,7 @@ class BouquetTemplate extends BaseTemplate {
 							<?php if ( $this->data['undelete'] ) { ?><div id="contentSub2"><?php $this->html( 'undelete' ) ?></div><?php } ?>
 						</header><!-- .entry-header -->
 
-						<div class="entry-content mw-body">
+						<div class="entry-content mw-body-content">
 							<?php if ( $this->data['newtalk'] ) { ?><div class="usermessage"><?php $this->html( 'newtalk' ) ?></div><?php } ?>
 							<!-- start content -->
 							<?php
