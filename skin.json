@@ -1,6 +1,6 @@
 {
 	"name": "Bouquet",
-	"version": "1.3.0",
+	"version": "1.3.1",
 	"author": [
 		"[http://automattic.com Automattic]",
 		"Jack Phoenix",
@@ -22,9 +22,9 @@
 		"bouquet": [ "forgetmenot", "pinkdogwood", "tigerlily" ]
 	},
 	"AutoloadClasses": {
-		"SkinBouquet": "Bouquet.skin.php",
-		"BouquetTemplate": "Bouquet.skin.php",
-		"BouquetSkinNavigationService": "Bouquet.skin.php"
+		"SkinBouquet": "includes/SkinBouquet.php",
+		"BouquetTemplate": "includes/BouquetTemplate.php",
+		"BouquetSkinNavigationService": "includes/BouquetSkinNavigationService.php"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
