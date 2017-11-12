@@ -859,11 +859,6 @@ table.diff {
 }
 
 /** CSS fixes for social tools -- verbatim copypasta from /skins/Dusk/resources/css/main.css */
-/* Social profiles + Special:UpdateProfile */
-#profile-top, .profile-info {
-	background-color: transparent !important;
-}
-
 /* Special:GiveGift */
 div.g-give-container {
 	width: auto;
