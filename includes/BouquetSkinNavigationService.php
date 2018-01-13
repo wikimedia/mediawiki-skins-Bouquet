@@ -27,7 +27,7 @@ class BouquetSkinNavigationService {
 		$useCache = $wgLang->getCode() == $wgContLang->getCode();
 
 		if ( $useCache || $this->forContent ) {
-			$cacheKey = wfMemcKey( $messageName, self::version );
+			$cacheKey = $wgMemc->makeKey( $messageName, self::version );
 			$nodes = $wgMemc->get( $cacheKey );
 		}
 
