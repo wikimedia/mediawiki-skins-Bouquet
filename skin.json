@@ -51,8 +51,7 @@
 				"resources/responsive/medium.css": {
 					"media": "(max-width: 1140px)"
 				}
-			},
-			"position": "top"
+			}
 		},
 		"skins.bouquet.js": {
 			"scripts": "resources/js/navigation.js"
