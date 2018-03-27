@@ -7,7 +7,7 @@
  */
 class SkinBouquet extends SkinTemplate {
 	public $skinname = 'bouquet', $stylename = 'bouquet',
-		$template = 'BouquetTemplate', $useHeadElement = true;
+		$template = 'BouquetTemplate';
 
 	/**
 	 * Load the skin's JS via ResourceLoader.
