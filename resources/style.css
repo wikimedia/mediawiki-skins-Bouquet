@@ -958,3 +958,7 @@ p.profile-update-unit {
 div.profile-tab {
 	margin-bottom: 5px;
 }
+
+div.search-types li {
+	margin-left: 24px;
+}
