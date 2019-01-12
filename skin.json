@@ -1,6 +1,6 @@
 {
 	"name": "Bouquet",
-	"version": "1.3.2",
+	"version": "1.4.0",
 	"author": [
 		"[http://automattic.com Automattic]",
 		"Jack Phoenix",
@@ -10,6 +10,9 @@
 	"descriptionmsg": "bouquet-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
 	"ValidSkinNames": {
 		"bouquet": "Bouquet"
 	},

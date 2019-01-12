@@ -28,10 +28,10 @@ class SkinBouquet extends SkinTemplate {
 		parent::setupSkinUserCss( $out );
 
 		// Load CSS via ResourceLoader
-		$out->addModuleStyles( array(
+		$out->addModuleStyles( [
 			'mediawiki.skinning.interface',
 			'mediawiki.skinning.content.externallinks',
 			'skins.bouquet'
-		) );
+		] );
 	}
 }

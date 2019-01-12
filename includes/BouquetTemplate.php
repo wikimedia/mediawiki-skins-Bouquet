@@ -6,7 +6,7 @@ class BouquetTemplate extends BaseTemplate {
 	 * Get the site logo, either a customized one or the current theme's default
 	 * one.
 	 *
-	 * @return String: logo image URL
+	 * @return string Logo image URL
 	 */
 	private function getLogo() {
 		global $wgStylePath, $wgDefaultTheme;
@@ -34,11 +34,11 @@ class BouquetTemplate extends BaseTemplate {
 
 			// internal (hyphenless) theme name -> directory/logo file mapping
 			// yes, this is lame as hell and I should just rename the dirs & files instead
-			$map = array(
+			$map = [
 				'forgetmenot' => 'forget-me-not',
 				'pinkdogwood' => 'pink-dogwood',
 				'tigerlily' => 'tiger-lily',
-			);
+			];
 
 			if ( isset( $map[$themeName] ) && $map[$themeName] ) {
 				$logoURL = "{$wgStylePath}/Bouquet/resources/colors/{$map[$themeName]}/{$map[$themeName]}-header.png";
@@ -63,15 +63,15 @@ class BouquetTemplate extends BaseTemplate {
 ?>
 <div id="page" class="hfeed">
 	<header id="branding" role="banner" class="clearfix" style="background-image: url(<?php echo $this->getLogo(); ?>);">
-		<?php echo Html::element( 'a', array(
+		<?php echo Html::element( 'a', [
 				'href' => $this->data['nav_urls']['mainpage']['href'],
 				'class' => 'header-link',
 				'title' => $wgSitename,
 				'rel' => 'home'
-			) + Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ); ?>
+			] + Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ); ?>
 		<div>
-			<h1 class="firstHeading" id="site-title"><span dir="auto"><?php echo Html::element( 'a', array(
-							'href' => $this->data['nav_urls']['mainpage']['href'] )
+			<h1 class="firstHeading" id="site-title"><span dir="auto"><?php echo Html::element( 'a', [
+							'href' => $this->data['nav_urls']['mainpage']['href'] ]
 							+ Linker::tooltipAndAccesskeyAttribs( 'p-logo' ), $wgSitename ); ?></span></h1>
 			<h2 id="site-description"><?php $this->msg( 'tagline' ) ?></h2>
 		</div>
@@ -88,7 +88,7 @@ class BouquetTemplate extends BaseTemplate {
 							$service = new BouquetSkinNavigationService();
 							$menuNodes = $service->parseMessage(
 								'bouquet-navigation',
-								array( 10, 10, 10, 10, 10, 10 ),
+								[ 10, 10, 10, 10, 10, 10 ],
 								60 * 60 * 3 // 3 hours
 							);
 
@@ -162,8 +162,8 @@ class BouquetTemplate extends BaseTemplate {
 						<label class="screen-reader-text" for="searchInput"><?php $this->msg( 'search' ) ?></label>
 						<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>"/>
 						<?php
-						echo $this->makeSearchInput( array( 'id' => 'searchInputTop', 'class' => 'mw-searchInput' ) );
-						echo $this->makeSearchButton( 'go', array( 'id' => 'searchGoButtonTop', 'class' => 'searchButton', 'style' => 'display: none' ) );
+						echo $this->makeSearchInput( [ 'id' => 'searchInputTop', 'class' => 'mw-searchInput' ] );
+						echo $this->makeSearchButton( 'go', [ 'id' => 'searchGoButtonTop', 'class' => 'searchButton', 'style' => 'display: none' ] );
 						?>
 						<div><a href="<?php $this->text( 'searchaction' ) ?>" rel="search"><?php $this->msg( 'powersearch-legend' ) ?></a></div>
 					</div>
@@ -276,11 +276,11 @@ class BouquetTemplate extends BaseTemplate {
 									<label class="screen-reader-text" for="searchInput"><?php $this->msg( 'search' ) ?></label>
 									<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>"/>
 									<?php
-										echo $this->makeSearchInput( array( 'id' => 'searchInput' ) );
-										echo $this->makeSearchButton( 'go', array( 'id' => 'searchGoButton', 'class' => 'searchButton' ) );
+										echo $this->makeSearchInput( [ 'id' => 'searchInput' ] );
+										echo $this->makeSearchButton( 'go', [ 'id' => 'searchGoButton', 'class' => 'searchButton' ] );
 										if ( $wgUseTwoButtonsSearchForm ) {
 											echo '&#160;';
-											echo $this->makeSearchButton( 'fulltext', array( 'id' => 'mw-searchButton', 'class' => 'searchButton' ) );
+											echo $this->makeSearchButton( 'fulltext', [ 'id' => 'mw-searchButton', 'class' => 'searchButton' ] );
 										} else { ?>
 											<div><a href="<?php $this->text( 'searchaction' ) ?>" rel="search"><?php $this->msg( 'powersearch-legend' ) ?></a></div><?php
 										} ?>
@@ -319,7 +319,7 @@ class BouquetTemplate extends BaseTemplate {
 
 		// Avoid PHP 7.1 warning of passing $this by reference
 		$template = $this;
-		Hooks::run( 'SkinTemplateToolboxEnd', array( &$template, true ) );
+		Hooks::run( 'SkinTemplateToolboxEnd', [ &$template, true ] );
 ?>
 		</ul>
 	</aside>
@@ -345,15 +345,15 @@ class BouquetTemplate extends BaseTemplate {
 	/**
 	 * Render a sidebar box from user-supplied data (a portion of MediaWiki:Sidebar)
 	 *
-	 * @param $bar string
-	 * @param $cont array|string
+	 * @param string $bar
+	 * @param array|string $cont
 	 */
 	function customBox( $bar, $cont ) {
-		$portletAttribs = array(
+		$portletAttribs = [
 			'class' => 'generated-sidebar widget',
-			'id' => Sanitizer::escapeId( "p-$bar" ),
+			'id' => Sanitizer::escapeIdForAttribute( "p-$bar" ),
 			'role' => 'navigation'
-		);
+		];
 		$tooltip = Linker::titleAttrib( "p-$bar" );
 		if ( $tooltip !== false ) {
 			$portletAttribs['title'] = $tooltip;

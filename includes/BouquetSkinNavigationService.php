@@ -12,19 +12,20 @@ class BouquetSkinNavigationService {
 	/**
 	 * Parses a system message by exploding along newlines.
 	 *
-	 * @param $messageName String: name of the MediaWiki message to parse
-	 * @param $maxChildrenAtLevel Array:
-	 * @param $duration Integer: cache duration for memcached calls
-	 * @param $forContent Boolean: is the message we're supposed to parse in
+	 * @param string $messageName Name of the MediaWiki message to parse
+	 * @param array $maxChildrenAtLevel
+	 * @param int $duration Cache duration for memcached calls
+	 * @param bool $forContent Is the message we're supposed to parse in
 	 *								the wiki's content language (true) or not?
-	 * @return Array
+	 * @return array
 	 */
-	public function parseMessage( $messageName, $maxChildrenAtLevel = array(), $duration, $forContent = false ) {
-		global $wgLang, $wgContLang, $wgMemc;
+	public function parseMessage( $messageName, $maxChildrenAtLevel = [], $duration, $forContent = false ) {
+		global $wgLang, $wgMemc;
 
 		$this->forContent = $forContent;
 
-		$useCache = $wgLang->getCode() == $wgContLang->getCode();
+		$contLang = MediaWiki\MediaWikiServices::getInstance()->getContentLanguage();
+		$useCache = $wgLang->getCode() == $contLang->getCode();
 
 		if ( $useCache || $this->forContent ) {
 			$cacheKey = $wgMemc->makeKey( $messageName, self::version );
@@ -50,12 +51,12 @@ class BouquetSkinNavigationService {
 	/**
 	 * Function used by parseMessage() above.
 	 *
-	 * @param $lines String: newline-separated lines from the supplied MW: msg
-	 * @param $maxChildrenAtLevel Array:
-	 * @return Array
+	 * @param array $lines Newline-separated lines from the supplied MW: msg
+	 * @param array $maxChildrenAtLevel Array:
+	 * @return array
 	 */
-	private function parseLines( $lines, $maxChildrenAtLevel = array() ) {
-		$nodes = array();
+	private function parseLines( $lines, $maxChildrenAtLevel = [] ) {
+		$nodes = [];
 
 		if ( is_array( $lines ) && count( $lines ) > 0 ) {
 			$lastDepth = 0;
@@ -115,8 +116,8 @@ class BouquetSkinNavigationService {
 	}
 
 	/**
-	 * @param $line String: line to parse
-	 * @return Array
+	 * @param string $line Line to parse
+	 * @return array
 	 */
 	private function parseOneLine( $line ) {
 		// trim spaces and asterisks from line and then split it to maximum two chunks
@@ -158,11 +159,11 @@ class BouquetSkinNavigationService {
 			}
 		}
 
-		return array(
+		return [
 			'original' => $lineArr[0],
 			'text' => $text,
 			'href' => $href
-		);
+		];
 	}
 
 }
