@@ -83,7 +83,7 @@
 	},
 	"ResourceModuleSkinStyles": {
 		"bouquet": {
-			"+mediawiki.special.preferences.styles": "resources/special.preferences.styles.css",
+			"+mediawiki.special.preferences.styles": "resources/skinStyles/special.preferences.styles.css",
 			"+ext.advancedSearch.styles": "resources/skinStyles/ext.advancedSearch.less"
 		}
 	},
