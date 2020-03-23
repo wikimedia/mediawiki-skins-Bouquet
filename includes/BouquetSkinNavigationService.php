@@ -65,7 +65,7 @@ class BouquetSkinNavigationService {
 
 			foreach ( $lines as $line ) {
 				// we are interested only in lines that are not empty and start with asterisk
-				if ( trim( $line ) != '' && $line{0} == '*' ) {
+				if ( trim( $line ) != '' && $line[0] == '*' ) {
 					$depth = strrpos( $line, '*' ) + 1;
 
 					if ( $lastSkip !== null && $depth >= $lastSkip ) {
@@ -147,7 +147,7 @@ class BouquetSkinNavigationService {
 		} else {
 			if ( empty( $link ) ) {
 				$href = '#';
-			} elseif ( $link{0} == '#' ) {
+			} elseif ( $link[0] == '#' ) {
 				$href = '#';
 			} else {
 				$title = Title::newFromText( $link );
