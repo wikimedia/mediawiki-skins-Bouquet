@@ -276,7 +276,6 @@ class BouquetTemplate extends BaseTemplate {
 	}
 
 	function searchBox() {
-		global $wgUseTwoButtonsSearchForm;
 ?>
 						<aside id="search-3" class="widget widget_search">
 							<form role="search" method="get" id="searchform" class="searchform" action="<?php $this->text( 'wgScript' ) ?>">
@@ -286,12 +285,9 @@ class BouquetTemplate extends BaseTemplate {
 									<?php
 										echo $this->makeSearchInput( [ 'id' => 'searchInput' ] );
 										echo $this->makeSearchButton( 'go', [ 'id' => 'searchGoButton', 'class' => 'searchButton' ] );
-										if ( $wgUseTwoButtonsSearchForm ) {
-											echo '&#160;';
-											echo $this->makeSearchButton( 'fulltext', [ 'id' => 'mw-searchButton', 'class' => 'searchButton' ] );
-										} else { ?>
-											<div><a href="<?php $this->text( 'searchaction' ) ?>" rel="search"><?php $this->msg( 'powersearch-legend' ) ?></a></div><?php
-										} ?>
+										echo '&#160;';
+										echo $this->makeSearchButton( 'fulltext', [ 'id' => 'mw-searchButton', 'class' => 'searchButton' ] );
+									?>
 								</div>
 							</form>
 						</aside>
