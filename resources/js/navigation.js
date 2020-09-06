@@ -3,17 +3,16 @@
  *
  * Handles toggling the navigation menu for small screens.
  */
-/* global document */
-( function() {
-	var container = document.getElementById( 'access' );
-	var button    = container.getElementsByTagName( 'h1' )[0],
-		menu      = container.getElementsByTagName( 'ul' )[0];
+( function () {
+	var container = document.getElementById( 'access' ),
+		button = container.getElementsByTagName( 'h1' )[ 0 ],
+		menu = container.getElementsByTagName( 'ul' )[ 0 ];
 
 	if ( undefined === button || undefined === menu ) {
 		return false;
 	}
 
-	button.onclick = function() {
+	button.onclick = function () {
 		if ( menu.className.indexOf( 'nav-menu' ) === -1 ) {
 			menu.className = 'nav-menu';
 		}
@@ -33,4 +32,4 @@
 	if ( !menu.childNodes.length ) {
 		button.style.display = 'none';
 	}
-} )();
+}() );
