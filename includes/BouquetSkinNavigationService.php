@@ -1,5 +1,5 @@
 <?php
-
+use MediaWiki\MediaWikiServices;
 /**
  * A fork of Oasis' NavigationService with some changes.
  * Namely the name was changed and "magic word" handling was removed from
@@ -8,6 +8,11 @@
 class BouquetSkinNavigationService {
 
 	const version = '0.01';
+
+	/**
+	 * @var bool Should the message we're rendering be parsed in the wiki's content language?
+	 */
+	public $forContent;
 
 	/**
 	 * Parses a system message by exploding along newlines.
@@ -20,16 +25,18 @@ class BouquetSkinNavigationService {
 	 * @return array
 	 */
 	public function parseMessage( $messageName, $maxChildrenAtLevel = [], $duration, $forContent = false ) {
-		global $wgLang, $wgMemc;
+		global $wgLang;
 
 		$this->forContent = $forContent;
 
-		$contLang = MediaWiki\MediaWikiServices::getInstance()->getContentLanguage();
+		$services = MediaWikiServices::getInstance();
+		$contLang = $services->getContentLanguage();
+		$cache = $services->getMainWANObjectCache();
 		$useCache = $wgLang->getCode() == $contLang->getCode();
 
 		if ( $useCache || $this->forContent ) {
-			$cacheKey = $wgMemc->makeKey( $messageName, self::version );
-			$nodes = $wgMemc->get( $cacheKey );
+			$cacheKey = $cache->makeKey( $messageName, self::version );
+			$nodes = $cache->get( $cacheKey );
 		}
 
 		if ( empty( $nodes ) ) {
@@ -41,7 +48,7 @@ class BouquetSkinNavigationService {
 			$nodes = $this->parseLines( $lines, $maxChildrenAtLevel );
 
 			if ( $useCache || $this->forContent ) {
-				$wgMemc->set( $cacheKey, $nodes, $duration );
+				$cache->set( $cacheKey, $nodes, $duration );
 			}
 		}
 
