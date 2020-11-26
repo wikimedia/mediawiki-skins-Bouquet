@@ -14,13 +14,7 @@ class BouquetTemplate extends BaseTemplate {
 		global $wgStylePath, $wgDefaultTheme;
 
 		$logoURL = '';
-		if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
-			// MediaWiki 1.34+
-			$customLogo = MediaWikiServices::getInstance()->getRepoGroup()
-				->findFile( 'Bouquet-skin-logo.png' );
-		} else {
-			$customLogo = wfFindFile( 'Bouquet-skin-logo.png' );
-		}
+		$customLogo = MediaWikiServices::getInstance()->getRepoGroup()->findFile( 'Bouquet-skin-logo.png' );
 
 		if ( is_object( $customLogo ) ) {
 			// Prefer a custom logo over the defaults (obviously!)
