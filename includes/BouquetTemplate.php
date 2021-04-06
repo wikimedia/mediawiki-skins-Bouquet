@@ -311,7 +311,7 @@ class BouquetTemplate extends BaseTemplate {
 		<h1 class="widget-title"><?php $this->msg( 'toolbox' ) ?></h1>
 		<ul>
 <?php
-		foreach ( $this->getToolbox() as $key => $tbItem ) {
+		foreach ( $this->data['sidebar']['TOOLBOX'] as $key => $tbItem ) {
 			echo $this->makeListItem( $key, $tbItem );
 		}
 
