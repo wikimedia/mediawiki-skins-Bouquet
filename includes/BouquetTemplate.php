@@ -59,7 +59,9 @@ class BouquetTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgSitename;
 
-		$this->data['pageLanguage'] = $this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
+		$skin = $this->getSkin();
+
+		$this->data['pageLanguage'] = $skin->getTitle()->getPageViewLanguage()->getHtmlCode();
 
 		$this->html( 'headelement' );
 ?>
@@ -184,7 +186,7 @@ class BouquetTemplate extends BaseTemplate {
 </div><!-- #page -->
 
 		<?php
-		$validFooterIcons = $this->getFooterIcons( 'icononly' );
+		$validFooterIcons = $this->get( 'footericons' );
 		$validFooterLinks = $this->getFooterLinks( 'flat' ); // Additional footer links
 
 		if ( count( $validFooterIcons ) + count( $validFooterLinks ) > 0 ) { ?>
@@ -198,11 +200,14 @@ class BouquetTemplate extends BaseTemplate {
 		echo '<div id="site-generator-wrapper">';
 
 		// @todo FIXME/CHECKME
-		foreach ( $validFooterIcons as $blockName => $footerIcons ) { ?>
+		foreach ( $validFooterIcons as $blockName => &$footerIcons ) { ?>
 	<div id="f-<?php echo htmlspecialchars( $blockName ); ?>ico">
 <?php
-			foreach ( $footerIcons as $icon ) {
-				echo $this->getSkin()->makeFooterIcon( $icon );
+			foreach ( $footerIcons as $footerIconKey => $icon ) {
+				if ( !isset( $footerIcon['src'] ) ) {
+					unset( $footerIcons[$footerIconKey] );
+				}
+				echo $skin->makeFooterIcon( $icon );
 			}
 ?>
 	</div>
