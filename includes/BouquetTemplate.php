@@ -163,7 +163,7 @@ class BouquetTemplate extends BaseTemplate {
 			<div id="search-area">
 				<form role="search" method="get" id="searchformTop" class="searchform" action="<?php $this->text( 'wgScript' ) ?>">
 					<div>
-						<label class="screen-reader-text" for="searchInput"><?php $this->msg( 'search' ) ?></label>
+						<label class="screen-reader-text" for="searchInputTop"><?php $this->msg( 'search' ) ?></label>
 						<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>"/>
 						<?php
 						echo $this->makeSearchInput( [ 'id' => 'searchInputTop', 'class' => 'mw-searchInput' ] );
@@ -276,7 +276,7 @@ class BouquetTemplate extends BaseTemplate {
 
 	function searchBox() {
 ?>
-						<aside id="search-3" class="widget widget_search">
+						<aside id="search-3" class="widget widget_search" role="search">
 							<form role="search" method="get" id="searchform" class="searchform" action="<?php $this->text( 'wgScript' ) ?>">
 								<div>
 									<label class="screen-reader-text" for="searchInput"><?php $this->msg( 'search' ) ?></label>
