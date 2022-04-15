@@ -1,4 +1,5 @@
 {
+	"name": "Bouquet",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
