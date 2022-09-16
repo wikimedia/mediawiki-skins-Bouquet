@@ -63,7 +63,6 @@ class BouquetTemplate extends BaseTemplate {
 
 		$this->data['pageLanguage'] = $skin->getTitle()->getPageViewLanguage()->getHtmlCode();
 
-		$this->html( 'headelement' );
 ?>
 <div id="page" class="hfeed">
 	<header id="branding" role="banner" class="clearfix" style="background-image: url(<?php echo $this->getLogo(); ?>);">
@@ -92,8 +91,8 @@ class BouquetTemplate extends BaseTemplate {
 							$service = new BouquetSkinNavigationService();
 							$menuNodes = $service->parseMessage(
 								'bouquet-navigation',
-								[ 10, 10, 10, 10, 10, 10 ],
-								60 * 60 * 3 // 3 hours
+								60 * 60 * 3, // 3 hours
+								[ 10, 10, 10, 10, 10, 10 ]
 							);
 
 							if ( is_array( $menuNodes ) && isset( $menuNodes[0] ) ) {
@@ -234,9 +233,6 @@ class BouquetTemplate extends BaseTemplate {
 
 		echo $footerEnd;
 
-		$this->printTrail();
-		echo Html::closeElement( 'body' );
-		echo Html::closeElement( 'html' );
 	} // end of execute() method
 
 	/**
