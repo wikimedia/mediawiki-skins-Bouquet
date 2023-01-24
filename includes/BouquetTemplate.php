@@ -129,6 +129,7 @@ class BouquetTemplate extends BaseTemplate {
 					<article class="post hentry">
 						<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
 						<header class="entry-header">
+							<?php echo $this->getIndicators(); ?>
 							<h1 id="firstHeading" class="firstHeading entry-title" lang="<?php $this->text( 'pageLanguage' ); ?>"><?php $this->html( 'title' ) ?></h1>
 							<?php if ( $this->data['undelete'] ) { ?><div id="contentSub2"><?php $this->html( 'undelete' ) ?></div><?php } ?>
 						</header><!-- .entry-header -->
