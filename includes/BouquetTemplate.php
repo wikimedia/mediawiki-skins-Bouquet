@@ -280,9 +280,17 @@ class BouquetTemplate extends BaseTemplate {
 									<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>"/>
 									<?php
 										echo $this->makeSearchInput( [ 'id' => 'searchInput' ] );
-										echo $this->makeSearchButton( 'go', [ 'id' => 'searchGoButton', 'class' => 'searchButton' ] );
+										echo $this->makeSearchButton( 'go', [
+											'id' => 'searchGoButton',
+											'class' => 'searchButton',
+											'value' => $this->getMsg( 'searcharticle' )->text()
+										] );
 										echo '&#160;';
-										echo $this->makeSearchButton( 'fulltext', [ 'id' => 'mw-searchButton', 'class' => 'searchButton' ] );
+										echo $this->makeSearchButton( 'fulltext', [
+											'id' => 'mw-searchButton',
+											'class' => 'searchButton',
+											'value' => $this->getMsg( 'searchbutton' )->text()
+										] );
 									?>
 								</div>
 							</form>
