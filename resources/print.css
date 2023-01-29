@@ -2,9 +2,15 @@
 header#branding {
 	background-image: none !important;
 }
+
 /* nor the footer
  * @see https://phabricator.wikimedia.org/T111435
  */
 #colophon {
+	display: none;
+}
+
+/* As of MW 1.39+ this isn't defined anywhere in core anymore... */
+.noprint {
 	display: none;
 }
