@@ -79,8 +79,8 @@ section {
 -------------------------------------------------------------- */
 
 .clear {
-	clear:both;
-	display:block;
+	clear: both;
+	display: block;
 }
 .clear-fix:after {
 	content: ".";
@@ -88,6 +88,11 @@ section {
 	height: 0;
 	clear: both;
 	visibility: hidden;
+}
+
+/* ashley February 2023: adding this back for social tools etc. on MW 1.39+ */
+.visualClear {
+	clear: both;
 }
 
 
@@ -121,7 +126,7 @@ section {
 }
 #content-wrapper {
 	clear: both;
-	 margin: 0 30.4% 0 0;
+	margin: 0 30.4% 0 0;
 }
 #content {
 	background: #ffebf2;
