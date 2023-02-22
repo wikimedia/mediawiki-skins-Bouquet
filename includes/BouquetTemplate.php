@@ -25,7 +25,7 @@ class BouquetTemplate extends BaseTemplate {
 			// by default at least on ShoutWiki, but probably not elsewhere
 			// Grumble grumble grumble...
 			// Pasta from /extensions/Theme/Theme.php
-			$themeFromRequest = $this->getSkin()->getRequest()->getVal( 'usetheme', false );
+			$themeFromRequest = $this->getSkin()->getRequest()->getVal( 'usetheme', '' );
 			if ( $themeFromRequest ) {
 				$themeName = $themeFromRequest;
 			} elseif ( isset( $wgDefaultTheme ) && $wgDefaultTheme != 'default' ) {
@@ -101,16 +101,30 @@ class BouquetTemplate extends BaseTemplate {
 									$hasChildren = isset( $menuNodes[$level0]['children'] );
 							?>
 					<li class="page_item<?php echo ( $hasChildren ? ' page_item_has_children' : '' ) ?>">
-						<a class="nav<?php echo $counter ?>_link" href="<?php echo htmlspecialchars( $menuNodes[$level0]['href'], ENT_QUOTES ) ?>"><?php echo htmlspecialchars( $menuNodes[$level0]['text'], ENT_QUOTES ) ?></a>
+						<a class="nav<?php echo $counter ?>_link" href="<?php echo htmlspecialchars( $menuNodes[$level0]['href'], ENT_QUOTES ) ?>">
+							<?php
+								// @note The suppression might be incorrect, (though I doubt it), but regardless of
+								// its presence or absence, phan still complains; so pick your poison,
+								// I guess.
+								// @phan-suppress-next-line SecurityCheck-DoubleEscaped
+								echo htmlspecialchars( $menuNodes[$level0]['text'], ENT_QUOTES )
+							?>
+						</a>
 							<?php if ( $hasChildren ) { ?>
 							<ul class="children">
 <?php
-									$asdf = 0;
-									$allKidNodes = count( $menuNodes[$level0]['children'] );
 									foreach ( $menuNodes[$level0]['children'] as $level1 ) {
 ?>
 							<li class="page_item">
-								<a href="<?php echo htmlspecialchars( $menuNodes[$level1]['href'], ENT_QUOTES ) ?>"><?php echo htmlspecialchars( $menuNodes[$level1]['text'], ENT_QUOTES ) ?></a>
+								<a href="<?php echo htmlspecialchars( $menuNodes[$level1]['href'], ENT_QUOTES ) ?>">
+									<?php
+										// @note The suppression might be incorrect, (though I doubt it), but regardless of
+										// its presence or absence, phan still complains; so pick your poison,
+										// I guess.
+										// @phan-suppress-next-line SecurityCheck-DoubleEscaped
+										echo htmlspecialchars( $menuNodes[$level1]['text'], ENT_QUOTES )
+									?>
+								</a>
 							</li>
 <?php
 										}
@@ -241,6 +255,7 @@ class BouquetTemplate extends BaseTemplate {
 	 */
 	protected function renderPortals( $sidebar ) {
 		if ( !isset( $sidebar['SEARCH'] ) ) {
+			// @phan-suppress-next-line PhanTypeMismatchDimAssignment
 			$sidebar['SEARCH'] = true;
 		}
 		if ( !isset( $sidebar['TOOLBOX'] ) ) {
