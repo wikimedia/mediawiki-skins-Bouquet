@@ -5,17 +5,14 @@
 	background: #ffd8e8;
 }
 body {
-	/* @embed */
 	background: url(body-bg.png) #891e42;
 }
 input#searchInput, input#searchInputTop {
-	/* @embed */
 	background: #e9cbd3 url(search-bg.png) no-repeat 10px 8px;
 	border-color: #c0758b;
 	color: #c0758b;
 }
 #primary input#searchInput, #primary input#searchInputTop {
-	/* @embed */
 	background: #fafafa url(search-bg.png) no-repeat 10px 8px;
 	border-color: #e7d9b9;
 }

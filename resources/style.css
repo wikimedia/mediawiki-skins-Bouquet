@@ -168,7 +168,6 @@ textarea {
 	font-weight: normal;
 }
 body {
-	/* @embed */
 	background: url(images/body-bg.png) #891e42;
 	background-attachment: fixed;
 	direction: ltr; /* Needed for RTL flipping */
@@ -205,7 +204,6 @@ textarea {
 }
 /* ashley: changed #s -> #searchInput for the below two rules */
 input#searchInput, input#searchInputTop {
-	/* @embed */
 	background: #e9cbd3 url(images/search-bg.png) no-repeat scroll 10px 8px;
 	border: 1px solid #c0758b;
 	border-radius: 15px;
@@ -216,7 +214,6 @@ input#searchInput, input#searchInputTop {
 	width: 77%;
 }
 #primary input#searchInput, #primary input#searchInputTop {
-	/* @embed */
 	background: #fafafa url("images/search-bg.png") no-repeat scroll 10px 8px;
 	border: 1px solid #e7d9b9;
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) inset;
@@ -395,7 +392,6 @@ a:hover {
 -------------------------------------------------------------- */
 
 #content article {
-	/* @embed */
 	background: transparent url(images/post-ornament.png) no-repeat center bottom;
 	margin: 0 0 3em;
 	padding: 1.5em .6em 4em;
