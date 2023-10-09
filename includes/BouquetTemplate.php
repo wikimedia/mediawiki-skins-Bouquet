@@ -183,7 +183,7 @@ class BouquetTemplate extends BaseTemplate {
 						echo $this->makeSearchInput( [ 'id' => 'searchInputTop', 'class' => 'mw-searchInput' ] );
 						echo $this->makeSearchButton( 'go', [ 'id' => 'searchGoButtonTop', 'class' => 'searchButton', 'style' => 'display: none' ] );
 						?>
-						<div><a href="<?php $this->text( 'searchaction' ) ?>" rel="search"><?php $this->msg( 'powersearch-legend' ) ?></a></div>
+						<div><a href="<?php echo SpecialPage::newSearchPage( $skin->getUser() )->getLocalURL() ?>" rel="search"><?php $this->msg( 'powersearch-legend' ) ?></a></div>
 					</div>
 				</form>
 			</div>
