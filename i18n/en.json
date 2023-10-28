@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": []
 	},
+	"bouquet-prefs-talkpage": "[[mw:Skin talk:Bouquet|{{int:talk}}]]",
 	"bouquet-desc": "Elegant, simple skin inspired by the beauty found in flowers",
 	"bouquet-navigation": "* mainpage|mainpage-description\n\n** recentchanges-url|recentchanges\n\n** randompage-url|randompage\n\n* faqpage|FAQ\n\n* helppage|help\n\n* portal-url|portal\n\n* currentevents-url|currentevents"
 }

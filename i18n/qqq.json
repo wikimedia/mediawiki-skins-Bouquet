@@ -4,6 +4,7 @@
 			"Umherirrender"
 		]
 	},
+	"bouquet-prefs-talkpage": "{{optional}}\nLink to the skin's talk page on MediaWiki.org; it is shown before the preview link in skin preferences on Special:Preferences. Inspired by [https://phabricator.wikimedia.org/T307113 T307113].",
 	"bouquet-desc": "{{desc|what=skin|name=Bouquet|url=https://www.mediawiki.org/wiki/Skin:Bouquet}}",
 	"bouquet-navigation": "{{ignore}}"
 }
