@@ -160,7 +160,7 @@ class BouquetSkinNavigationService {
 		if ( preg_match( '/^(?:' . wfUrlProtocols() . ')/', $link ) ) {
 			$href = $link;
 		} else {
-			if ( empty( $link ) ) {
+			if ( !$link ) {
 				$href = '#';
 			} elseif ( $link[0] == '#' ) {
 				$href = '#';
