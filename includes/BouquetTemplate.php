@@ -28,7 +28,7 @@ class BouquetTemplate extends BaseTemplate {
 			$themeFromRequest = $this->getSkin()->getRequest()->getVal( 'usetheme', '' );
 			if ( $themeFromRequest ) {
 				$themeName = $themeFromRequest;
-			} elseif ( isset( $wgDefaultTheme ) && $wgDefaultTheme != 'default' ) {
+			} elseif ( $wgDefaultTheme != 'default' ) {
 				$themeName = $wgDefaultTheme;
 			} else {
 				$themeName = false;
