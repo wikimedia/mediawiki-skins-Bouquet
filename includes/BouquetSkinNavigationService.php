@@ -1,5 +1,7 @@
 <?php
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
+
 /**
  * A fork of Oasis' NavigationService with some changes.
  * Namely the name was changed and "magic word" handling was removed from
