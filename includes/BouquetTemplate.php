@@ -63,7 +63,7 @@ class BouquetTemplate extends BaseTemplate {
 
 		$skin = $this->getSkin();
 
-		$this->data['pageLanguage'] = $skin->getTitle()->getPageViewLanguage()->getHtmlCode();
+		$this->data['pageLanguage'] = $skin->getTitle()->getPageLanguage()->getHtmlCode();
 
 ?>
 <div id="page" class="hfeed">
