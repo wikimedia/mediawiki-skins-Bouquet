@@ -4,7 +4,7 @@
  * Handles toggling the navigation menu for small screens.
  */
 ( function () {
-	var container = document.getElementById( 'access' ),
+	const container = document.getElementById( 'access' ),
 		button = container.getElementsByTagName( 'h1' )[ 0 ],
 		menu = container.getElementsByTagName( 'ul' )[ 0 ];
 
@@ -13,11 +13,11 @@
 	}
 
 	button.onclick = function () {
-		if ( menu.className.indexOf( 'nav-menu' ) === -1 ) {
+		if ( !menu.className.includes( 'nav-menu' ) ) {
 			menu.className = 'nav-menu';
 		}
 
-		if ( button.className.indexOf( 'toggled-on' ) !== -1 ) {
+		if ( button.className.includes( 'toggled-on' ) ) {
 			button.className = button.className.replace( ' toggled-on', '' );
 			menu.className = menu.className.replace( ' toggled-on', '' );
 			container.className = container.className.replace( 'main-small-navigation', 'navigation-main' );
