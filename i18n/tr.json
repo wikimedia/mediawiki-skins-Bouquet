@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"BaRaN6161 TURK"
+			"BaRaN6161 TURK",
+			"HakanIST"
 		]
 	},
+	"bouquet-prefs-talkpage": "[[mw:Skin talk:Bouquet|{{int:talk}}]]",
 	"bouquet-desc": "Çiçeklerde bulunan güzellikten ilham alan zarif, sade görünüm"
 }
